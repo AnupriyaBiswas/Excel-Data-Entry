@@ -41,7 +41,7 @@ function App() {
     <div className="page">
       {/* HEADER */}
       <header className="header">
-        <img src="/src/assets/unimoni-logo.jpg" alt="Unimoni" />
+        <img src="/src/assets/unimoni-logo.png" alt="Unimoni" />
         <span>Gold Loan</span>
       </header>
 
