@@ -15,7 +15,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://excel-data-entry-frontend.onrender.com/submit", {
+      const res = await fetch("http://localhost:3000/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
@@ -31,7 +31,7 @@ function App() {
   };
 
   const downloadExcel = () => {
-    window.open("https://excel-data-entry-frontend.onrender.com/download", "_blank");
+    window.open("http://localhost:3000/download", "_blank");
   };
 
   return (
