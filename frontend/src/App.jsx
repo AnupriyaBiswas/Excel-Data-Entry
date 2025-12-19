@@ -31,22 +31,22 @@ function App() {
   return (
     <div style={{
       minHeight: "100vh",
-    width: "100vw",          
-    overflowX: "hidden",    
-    background: "linear-gradient(120deg, #0c0c0c, #1b1b1b)",
-    color: "white",
-    display: "flex",
-    flexDirection: "column",
+      width: "100vw",
+      overflowX: "hidden",
+      background: "linear-gradient(120deg, #0c0c0c, #1b1b1b)",
+      color: "white",
+      display: "flex",
+      flexDirection: "column",
 
     }}>
       {/* HEADER */}
       <header style={{
         display: "flex",
-    alignItems: "center",
-    padding: "15px 60px",
-    gap: "15px",
-    width: "100vw",     
-    borderBottom: "1px solid rgba(245, 193, 108, 0.2)",
+        alignItems: "center",
+        padding: "15px 60px",
+        gap: "15px",
+        width: "100vw",
+        borderBottom: "1px solid rgba(245, 193, 108, 0.2)",
 
       }}>
         <img
@@ -71,11 +71,11 @@ function App() {
         width: "100%",
       }}>
         {/* LEFT SIDE - Content and Form */}
-        <div style={{ 
-              maxWidth: "520px",
-    width: "100%",
-    padding: "30px 60px",
-    boxSizing: "border-box",
+        <div style={{
+          maxWidth: "520px",
+          width: "100%",
+          padding: "30px 60px",
+          boxSizing: "border-box",
 
         }}>
           {/* Hero Text */}
@@ -117,7 +117,7 @@ function App() {
             }}>
               Apply Now
             </h3>
-            
+
             <input
               name="name"
               placeholder="Full Name"
@@ -133,7 +133,7 @@ function App() {
                 outline: "none"
               }}
             />
-            
+
             <input
               name="email"
               type="email"
@@ -150,7 +150,7 @@ function App() {
                 outline: "none"
               }}
             />
-            
+
             <input
               name="age"
               type="number"
@@ -167,7 +167,7 @@ function App() {
                 outline: "none"
               }}
             />
-            
+
             <button
               onClick={submit}
               style={{
@@ -193,22 +193,22 @@ function App() {
         {/* RIGHT SIDE - Customer Image */}
         <div style={{
           flex: "0 0 45%",
-    maxWidth: "45%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingRight: "40px",
+          maxWidth: "45%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingRight: "40px",
         }}>
           <img
             src="/subject.png"
             alt="Happy Customer"
             style={{
               width: "100%",
-      maxWidth: "520px",
-      height: "auto",
-      objectFit: "contain",
-      borderRadius: "14px",
-      boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
+              maxWidth: "520px",
+              height: "auto",
+              objectFit: "contain",
+              borderRadius: "14px",
+              boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
             }}
           />
         </div>
@@ -224,7 +224,7 @@ function App() {
       }}>
         © 2025 Unimoni | A Wiz Group Company
       </footer>
-      
+
       {/* Mobile/Tablet Media Query Styles */}
       <style>{`
         * {
@@ -284,8 +284,8 @@ function App() {
     
     section > div:last-child {
     order: 2;
-    width: 90% !important;          /* ✅ MATCH FORM FEEL */
-    max-width: 420px !important;    /* ✅ SAFE LIMIT */
+    width: 90% !important;          
+    max-width: 420px !important;    
     height: 260px !important;
     margin: 20px auto 0 auto !important;
     overflow: hidden !important;
