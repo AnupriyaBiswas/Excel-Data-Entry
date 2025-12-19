@@ -30,19 +30,24 @@ function App() {
 
   return (
     <div style={{
-      height: "100vh",
-      background: "linear-gradient(120deg, #0c0c0c, #1b1b1b)",
-      color: "white",
-      display: "flex",
-      flexDirection: "column"
+      minHeight: "100vh",
+    width: "100vw",          
+    overflowX: "hidden",    
+    background: "linear-gradient(120deg, #0c0c0c, #1b1b1b)",
+    color: "white",
+    display: "flex",
+    flexDirection: "column",
+
     }}>
       {/* HEADER */}
       <header style={{
         display: "flex",
-        alignItems: "center",
-        padding: "15px 60px",
-        gap: "15px",
-        borderBottom: "1px solid rgba(245, 193, 108, 0.2)"
+    alignItems: "center",
+    padding: "15px 60px",
+    gap: "15px",
+    width: "100vw",     
+    borderBottom: "1px solid rgba(245, 193, 108, 0.2)",
+
       }}>
         <img
           src="/unimoni-logo.jpg"
@@ -61,17 +66,17 @@ function App() {
       {/* HERO SECTION */}
       <section style={{
         display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
-        padding: "30px 60px",
-        gap: "60px",
         flex: 1,
-        minHeight: 0
+        width: "100%",
       }}>
         {/* LEFT SIDE - Content and Form */}
         <div style={{ 
-          maxWidth: "100%",
-          flex: "0 0 auto"
+              maxWidth: "520px",
+    width: "100%",
+    padding: "30px 60px",
+    boxSizing: "border-box",
+
         }}>
           {/* Hero Text */}
           <div style={{ marginBottom: "25px" }}>
@@ -98,7 +103,7 @@ function App() {
             borderRadius: "16px",
             padding: "25px",
             width: "100%",
-            maxWidth: "100%",
+            maxWidth: "500%",
             boxShadow: "0 0 25px rgba(245, 193, 108, 0.25)",
             border: "1px solid rgba(245, 193, 108, 0.3)"
           }}>
@@ -187,24 +192,23 @@ function App() {
 
         {/* RIGHT SIDE - Customer Image */}
         <div style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flex: "1 1 auto",
-          height: "100%",
-          minHeight: 0
+          flex: "0 0 45%",
+    maxWidth: "45%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingRight: "40px",
         }}>
           <img
             src="/subject.png"
             alt="Happy Customer"
             style={{
-              maxWidth: "100%",
-              maxHeight: "100%",
-              width: "auto",
-              height: "auto",
-              objectFit: "contain",
-              borderRadius: "12px",
-              boxShadow: "0 10px 40px rgba(245, 193, 108, 0.2)"
+              width: "100%",
+      maxWidth: "520px",
+      height: "auto",
+      objectFit: "contain",
+      borderRadius: "14px",
+      boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
             }}
           />
         </div>
@@ -223,22 +227,81 @@ function App() {
       
       {/* Mobile/Tablet Media Query Styles */}
       <style>{`
-        @media (max-width: 768px) {
-          header {
-            padding: 15px 20px !important;
-          }
-          header img {
-            height: 35px !important;
-          }
-          section {
-            flex-direction: column !important;
-            padding: 20px !important;
-            gap: 20px !important;
-          }
-          section > div:last-child {
-            display: none !important;
-          }
-        }
+        * {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 20px !important;
+      gap: 10px !important;
+    }
+    
+    header img {
+      height: 30px !important;
+    }
+    
+    header span {
+      font-size: 28px !important;
+    }
+    
+    section {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    
+    section > div:first-child {
+    padding: 20px !important;
+    width: 100% !important;
+  }
+    
+    section > div:first-child > div:first-child h1 {
+      font-size: 32px !important;
+    }
+    
+    section > div:first-child > div:first-child h2 {
+      font-size: 18px !important;
+    }
+    
+    section > div:first-child > div:last-child {
+      padding: 20px !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    
+    section > div:first-child > div:last-child input,
+    section > div:first-child > div:last-child button {
+      box-sizing: border-box !important;
+    }
+    
+    section > div:last-child {
+    order: 2;
+    width: 90% !important;          /* ✅ MATCH FORM FEEL */
+    max-width: 420px !important;    /* ✅ SAFE LIMIT */
+    height: 260px !important;
+    margin: 20px auto 0 auto !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    transform: translateX(15px);
+  }
+    
+    section > div:last-child img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    margin-bottom: 24px !important;
+  }
+  }
+
       `}</style>
     </div>
   );
